@@ -25,6 +25,7 @@ public class Practica2 {
         do {
 
             String numero1;
+            // s'ha de crear un métode per entrada de double
             do {
                 System.out.println("\n Introdueix el primer numero. ");
                 numero1 = sc.nextLine();
@@ -32,6 +33,7 @@ public class Practica2 {
             double nume1 = Double.parseDouble(numero1);
             double n1 = new Double(numero1);
 
+            // métode  per entrada de operacions fins que no siguio
             do {
                 System.out.println("\n Operació? (Indica el signe)");
                 System.out.println("+ = sumar \n - = restar \n"
@@ -80,6 +82,7 @@ public class Practica2 {
                         }
                         res = n1 / n2;
                         break;
+                        //seleccionar * pot crear confussio de la operació
                     case "*":
                         res = Math.pow(n1, n1);
                         break;
@@ -97,7 +100,7 @@ public class Practica2 {
                         break;
                 }
             } while (comprobar != true);
-
+// verificació ha de ser més senzilla solament sortida quan seleccioni i/o metode que certifiqui que es cert 
             System.out.println("(" + numero1 + ") " + operacion + " (" + numero2 + ")" + " = " + res);
             System.out.println("\n Vols continuar operant? \n");
             System.out.println(" [s/n]");
@@ -116,6 +119,7 @@ public class Practica2 {
                         comprobar = false;
                 }
             } while (comprobar != true);
+            // amb un .equalsIgnoreCase seria suficient tinria de estar inici ja que l'operació 
         } while (operacion.equals("s") || operacion.equals("S"));
     }
 }
