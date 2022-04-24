@@ -27,7 +27,7 @@ public class Practica2 {
             String numero1;
             // s'ha de crear un métode per entrada de double
             do {
-                System.out.println("Calculadora\n Introdueix el primer numero. ");
+                System.out.println("Calculadora\n Introdueix el primer número. ");
                 numero1 = sc.nextLine();
             } while (!numero1.matches("[+-]?[\\d]*[.]?[\\d]+"));
             //double nume1 = Double.parseDouble(numero1);
@@ -58,7 +58,7 @@ public class Practica2 {
 
             String numero2;
             do {
-                System.out.println("\n Introdueix el segon numero.");
+                System.out.println("\n Introdueix el segon número.");
                 numero2 = sc.nextLine();
             } while (!numero2.matches("[+-]?[\\d]*[.]?[\\d]+"));
             //double nume2 = Double.parseDouble(numero2);
@@ -116,21 +116,19 @@ public class Practica2 {
             do {
                 comprobar = true;
                 operacion = sc.nextLine();
-                if (operacion.equalsIgnoreCase("S") || 
-                        operacion.equalsIgnoreCase("N")) {
+                if (!(operacion.equalsIgnoreCase("S")
+                        || operacion.equalsIgnoreCase("N"))) {
 
-                }else{
                     System.err.println("\n Error, posa un valor vàlid. \n");
-                    comprobar=false;
+                    comprobar = false;
                 }
                 /**
                  * switch (operacion) { case "s": case "S": case "n": case "N":
                  * break; default: System.err.println("\n Error, posa un valor
-                 * vàlid. \n"); comprobar = false;
-                }
+                 * vàlid. \n"); comprobar = false; }
                  */
             } while (comprobar != true);
-            // amb un .equalsIgnoreCase seria suficient tinria de estar inici ja que l'operació 
+            // amb un .equalsIgnoreCase seria suficient 
         } while (operacion.equalsIgnoreCase("S"));
     }
 }
