@@ -36,14 +36,14 @@ public class Practica2 {
             // métode  per entrada de operacions fins que no sigui
             do {
                 System.out.println("\n Operació? (Indica el signe)");
-                System.out.println("Signe ***** Operació seleccionada\n"
-                        + "*********************************\n"
-                        + " \"+\" ***** sumar \n"
-                        + " \"-\" ***** restar \n"
-                        + " \"x\" ***** multiplicar \n"
-                        + " \"/\" ***** dividir \n"
-                        + " \"*\" ***** elevar primer num al segon num.\n"
-                        + " \"%\" ***** residu");
+                System.out.println("Signe ---- Operació seleccionada\n"
+                        + "<---------------------------------->\n"
+                        + " \"+\" ~~~~~ sumar \n"
+                        + " \"-\" ~~~~~ restar \n"
+                        + " \"x\" ~~~~~ multiplicar \n"
+                        + " \"/\" ~~~~~ dividir \n"
+                        + " \"*\" ~~~~~ elevar primer num al segon num.\n"
+                        + " \"%\" ~~~~~ residu");
                 operacion = sc.nextLine();
                 if (operacion.equals("+") || operacion.equals("-")
                         || operacion.equalsIgnoreCase("X")
@@ -116,17 +116,19 @@ public class Practica2 {
             do {
                 comprobar = true;
                 operacion = sc.nextLine();
+                if (operacion.equalsIgnoreCase("S") || 
+                        operacion.equalsIgnoreCase("N")) {
 
-                switch (operacion) {
-                    case "s":
-                    case "S":
-                    case "n":
-                    case "N":
-                        break;
-                    default:
-                        System.err.println("\n Error, posa un valor vàlid. \n");
-                        comprobar = false;
+                }else{
+                    System.err.println("\n Error, posa un valor vàlid. \n");
+                    comprobar=false;
                 }
+                /**
+                 * switch (operacion) { case "s": case "S": case "n": case "N":
+                 * break; default: System.err.println("\n Error, posa un valor
+                 * vàlid. \n"); comprobar = false;
+                }
+                 */
             } while (comprobar != true);
             // amb un .equalsIgnoreCase seria suficient tinria de estar inici ja que l'operació 
         } while (operacion.equalsIgnoreCase("S"));
