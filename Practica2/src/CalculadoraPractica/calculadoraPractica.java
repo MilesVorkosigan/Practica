@@ -39,14 +39,15 @@ public class calculadoraPractica {
                     + " \"x\" ~~~~~ multiplicar \n"
                     + " \"/\" ~~~~~ dividir \n"
                     + " \"p\" ~~~~~ elevar primer num al segon num.\n"
-                    + " \"%\" ~~~~~ residu"
-                    + "\"L\" ~~~~~ logaritme");
+                    + " \"%\" ~~~~~ residu.\n"
+                    + " \"L\" ~~~~~ logaritme");
             operacio = sc.nextLine();
             comprobar = operacio.equals("+") || operacio.equals("-")
                     || operacio.equalsIgnoreCase("X")
                     || operacio.equals("/")
                     || operacio.equals("%")
-                    || operacio.equalsIgnoreCase("P");
+                    || operacio.equalsIgnoreCase("P")
+                    || operacio.equalsIgnoreCase("L");
             if (comprobar == false) {
                 System.err.println("Selecció incorrecte");
             }
@@ -115,6 +116,7 @@ public class calculadoraPractica {
             }
         } while (comprobar != true);
     }
+    
 
     @Override
     public String toString() {
